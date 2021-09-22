@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style type="text/css">
+body {
+    background-color:coral;
+}
+
+#like{
+    width:200px;
+    height:55px;
+    position:relative ;
+    border:2px solid;
+    outline:none;
+    border-radius:5px;
+    background:#fff;
+    top:250px;
+    transition:0.1s;
+}
+
+#like:active{
+    height:52px;
+    width:185px;
+    top:255px;
+}
+
+.likes_count{
+    position:relative ;
+    top:300px;
+    color:white;
+}
+
+.likes_text{
+    position:absolute ;
+    color:#fff;
+    top:-440px;
+    left:100px;
+    transition:1s;
+}
+
+#learn{
+    width:130px;
+    height:45px;
+    background-color:#e54;
+    position:absolute ;
+    outline:none;
+    border:2px solid;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    left:130px;
+    top:580px;
+    border-radius:3px;
+}
+        </style>
+         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+         <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+
+    </head>
+    <body>
+        <center><button onclick="inc()" id="like"><div class="fa fa-heart"style="font-size:25px;color:#e54;">Like</div></button></center>
+        <center><h2 class="likes_count">0</h2></center>
+        <h1 class="likes_text">😊We Did It</h1>
+        <a href="https://youtu.be/-vD_-YkQWxY"><button id="learn">TUTORIAL</button></a>
+        <script>
+            var counter=0;
+            var likes_count=document.querySelector(".likes_count")
+            
+            function inc(){
+                counter++
+                likes_count.innerHTML=counter
+                if(counter>100){
+                    var likes_text=document.querySelector(".likes_text").style.top="440px"
+                }
+                }
+                
+            
+            
+        </script>
+    </body>
+</html>
